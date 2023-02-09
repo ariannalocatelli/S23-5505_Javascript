@@ -157,9 +157,10 @@ console.log( convertToCelsius() );
 
 
 Scope is how a variable is available to the entire program:
-Global scope:
-Any variables or functions declared outside of a function will be available to all JavaScript code on the page, whether that code is inside a function or otherwise 
-Functional/Local scope:
+**Global scope:**
+Any variables or functions declared outside of a function will be available to all JavaScript code on the page, whether that code is inside a function or otherwise
+
+**Functional/Local scope:**
 Variables and functions declared inside a function are visible only inside that function—no code outside the function can access them. 
 Local variables also have a lifetime - they die when the function  finishes executing.
 
