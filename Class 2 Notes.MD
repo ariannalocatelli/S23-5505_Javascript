@@ -157,6 +157,7 @@ console.log( convertToCelsius() );
 
 
 Scope is how a variable is available to the entire program:
+
 **Global scope:**
 Any variables or functions declared outside of a function will be available to all JavaScript code on the page, whether that code is inside a function or otherwise
 
