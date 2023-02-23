@@ -2,7 +2,7 @@
 # THE DOCUMENT OBJECT MODEL & EVENT HANDLING
 
 
-## WEB STANDARDS
+## 1 WEB STANDARDS
 LIVING STANDARDS
 HTML standard (current HTML5)
 W3C.org
@@ -21,6 +21,10 @@ Abstract and standardized representation of the HTML document independent of the
 DOM Standards and Levelshttps://caniuse.com/#search=dom
 Some browsers do add in variations to the model  eg. https://quirksmode.org/dom/html
 Basically a collection of objects within objects (called Nodes and NodeLists)
+
+
+## 3 THE DOM TREE
+
 ```
 <!DOCTYPE html>
 <html lang="en">
@@ -31,8 +35,8 @@ Basically a collection of objects within objects (called Nodes and NodeLists)
 </body>
 </html>
 ```
+## 4 THE DOM TREE
 
-## 3 THE DOM TREE
 ```
 <!DOCTYPE html>
 <html lang="en">
@@ -44,18 +48,17 @@ Basically a collection of objects within objects (called Nodes and NodeLists)
   <h1 id="title">Main Title</h1>
   <span>Below is a <strong>table</strong></span> 
   <table class="primary_table">
-    		<tr>
-        		<td>Row 1 Cell 1</td> 
-<td>Row 1 Cell 2</td>
-    		</tr> 
+   	<tr>
+       		<td>Row 1 Cell 1</td> 
+		<td>Row 1 Cell 2</td>
+    	</tr> 
   </table>
   <span>Above is a table</span> 
 </body>
 </html>
 ```
 
-
-## 4 THE DOM TREE
+## 5 DOM NODES
 
 DOM has different types of nodes. Some common ones:
 Element node: 1
@@ -63,7 +66,8 @@ Text node: 3
 Comment node: 8
 The top level node, which is document: 9
 
-## 5 DOM NODES
+
+## 6 DOM METHODS
 
 Accessing the document object:  document
 ```
@@ -78,10 +82,9 @@ const forms = document.forms; 	// returns a list of forms
 const links = document.links; 	// returns a list of links inside anchors
 ```
 
+## 7 DOM METHODS
 
-## 6 DOM METHODS
-
-getting elements
+Getting elements:
 ```
 const title = document.getElementById('title');				// returns node object
 const table = document.getElementsByClassName('primary_table'); 	// list of table objects by classname
@@ -95,7 +98,7 @@ for (let i = 0; i < spans.length; i++) {
 }
 ```
 
-## 7 DOM METHODS
+## 8 DOM METHODS
 
 querySelector: returns first match on any element based on the css query
 ```
@@ -108,7 +111,7 @@ const spans = document.querySelectorAll('span');			// list of span objects
 ```
 
 
-## 8 DOM METHODS
+## 9 DOM NAVIGATION
 
 childNodes returns ALL nodes that are children of a DOM object node:
 ```
@@ -127,7 +130,7 @@ tables.parentNode;
 ```
 
 
-## 9 DOM NAVIGATION
+## 10 DOM NAVIGATION
 
 nodeValue returns  value inside a DOM object node containing text:
 ```tables.nodeValue;	//returns null
@@ -141,8 +144,6 @@ tables.textContent;
 tables.innerHTML;
 ```
 
-
-## 10 DOM NAVIGATION
 
 ## 11 DOM ATTRIBUTES
 
@@ -175,6 +176,7 @@ tables.classList.contains("primary_table");
 tables.classList
 ```
 
+## SETTING DOM ATTRIBUTES
 
 Using generic attributes:
 ```
@@ -192,7 +194,7 @@ tables.classList.remove("sec_table");
 tables.classList.toggle("enabled");
 ```
 
-SETTING DOM ATTRIBUTES
+## UPDATING DOM 
 
 Create a new element:
 ```
@@ -254,7 +256,6 @@ h1.style.backgroundColor = "lightgrey"; //props are in lower camel case
 h1.style.display = "none";
 ```
 
-## UPDATING DOM 
 
 
 ## EVENTS
@@ -263,12 +264,14 @@ Events occur whenever user clicks, types, moves the mouse.
 Custom events can also be defined in javascript.
 Event listeners informs javascript when the event happens.
 
-Events list: https://developer.mozilla.org/en-US/docs/Web/Events
+Events list Reference: 
+https://developer.mozilla.org/en-US/docs/Web/Events
 OR
 https://w3c.github.io/uievents/#event-types-list
 
 
 
+## EVENT LISTENERS
 
 Event listener is a DOM method that listens out for any specified event on the page:
 ```
@@ -285,7 +288,7 @@ addEventListener("click", function() {
 }); //click anywhere on the document
 ```
 
-## EVENT LISTENERS
+## EVENT PARAMETER OBJECT
 
 An event object is sent to the callback function:
 ```
@@ -297,8 +300,7 @@ an.addEventListener("click", clickFunction);
 ```
 
 
-
-## EVENT PARAMETER OBJECT
+# TYPES: MOUSE EVENTS
 
 The mouseover event occurs when the mouse pointer is placed over the element to which the event listener is attached.The mouseout event occurs when the mouse pointer moves away from an element. The mouseover event occurs when the mouse pointer is placed over the element The mouseout event occurs when the mouse pointer moves away from an element.
 const an = document.getElementsByTagName('a')[1];
@@ -310,7 +312,7 @@ an.addEventListener("mouseover",function(e){ console.log("over") });
 an.addEventListener("mouseout",function(e){ console.log("out") });
 ```
 
-TYPES: MOUSE EVENTS
+## BLOCK DEFAULT BEHAVIOUR
 
 Prevent redirecting to a link on clicking an anchor:
 ```
@@ -322,7 +324,7 @@ an.addEventListener("click",function(e){
 ```
 
 
-## BLOCK DEFAULT BEHAVIOUR
+## EVENT PROPAGATION
 
 An event is inherited by all child nodes of the node the listener is added to.
 **Bubbling** - when event goes up the tree in sequence of priority, firing on elements with more specific event handler to less specific - default
@@ -347,8 +349,8 @@ e.stopPropagation();
 ```
 
 
-## EVENT PROPAGATION
 
+## EVENT DELEGATION
 
 An event is inherited by all child nodes of the node the listener is added to.
 ```
@@ -360,9 +362,9 @@ list.addEventListener("click",function(e){
 ```
 
 
-## EVENT DELEGATION
 
 ## Exercises:
+
 1. Update the style of the first paragraph tag in the HTML to use a different font family, color and/or size.
 
 2. Add a new paragraph tag at the bottom of the "section" node.
