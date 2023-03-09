@@ -63,11 +63,13 @@ How to get around the single-threaded nature of Javascript
 
 Restful structure features:
 - All data required is provided in the request itself - no other global dependencies
-- Separation between client and server  - completely independent and can be replaced.Standard url composition which is then documented and provided as reference. Also uses standard web methods to perform the actions:
-**GET**: read or retrieve data/resource
-**POST**: create new resource
-**PUT**: update/create resource
-**DELETE**: delete a resource
+- Separation between client and server  - completely independent and can be replaced.Standard url composition which is then documented and provided as reference. 
+- Also uses standard web methods to perform the actions:
+	- **GET**: read or retrieve data/resource
+	-- **POST**: create new resource
+	-- **PUT**: update/create resource
+	-- **DELETE**: delete a resource
+
 more info: http://www.robert-drummond.com/2013/05/08/how-to-build-a-restful-web-api-on-a-raspberry-pi-in-javascript-2/
 
 
@@ -96,12 +98,15 @@ const person = {
 "last_name": "Smith", 
 "Schools": ["Parsons", "NYU"]
 };
-
+```
 Convert to string to pass as parameters:
+```
 const person_payload = JSON.stringify(person)
 // "{"firstName":"John","lastName":"Doe","age":30}"
+```
 
 Convert BACK TO AN OBJECT:
+```
 const person_object = JSON.parse(person_payload)
 
 // {firstName: "John", lastName: "Doe", age: 30}
