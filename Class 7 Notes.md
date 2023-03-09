@@ -32,7 +32,7 @@ So, we want the code to execute asynchronously.
 
 How to get around the single-threaded nature of Javascript
 - Using the Worker API - moves long delaying code to a different browser process, external to Javascript.
-- Using asynchronous JavaScript (such as callbacks, promises, and async/await), you can perform long network requests without blocking the main thread.
+- Using Event listeners, you can add callback functions that execute when that event occurs.
 - Not waiting for the results of a long-running computationI - by using asynchronous functions eg.    
   - setTimeout()
   - XMLHttpRequest()
