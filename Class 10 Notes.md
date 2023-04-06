@@ -860,6 +860,18 @@ for (let y = 0; y < 200; y++) {
 }
 ```
 
+## In-class Assignment
+Assignment - make a pie or bar chart
+
+```
+const data = [
+  {name: "Name 1", count: 1045, color: "blue"},
+  {name: "Name 2", count: 563, color: "red"},
+  {name: "Name 3", count: 231, color: "silver"},
+  {name: "Name 4", count: 423, color: "pink"}
+];
+```
+
 ## MORE HTML5 APIs
 
 - Prefetch API
