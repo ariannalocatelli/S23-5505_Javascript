@@ -3,6 +3,13 @@
 **For step 9, use this boilerplate: [es6 modules boilerplate](https://github.com/kujain/S23-5505_Javascript/blob/main/class11_boilerplate_es6_starter.zip)**
 
 # 0. SETUP
+XCODE (for OSX):
+https://developer.apple.com/download
+```
+gcc -v
+xcode-select --install
+```
+
 Homebrew: package manager for OSX
 ```
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
@@ -22,6 +29,11 @@ brew install node@18
 ```
 to upgrade: `brew upgrade node`
 (or download install from nodejs.org - LTS 18.x)
+
+Git install:
+```
+brew install git
+```
 
 # 1. Start:
 
